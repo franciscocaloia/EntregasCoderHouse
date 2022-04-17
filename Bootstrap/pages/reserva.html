@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/Logo.webp">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>PedraDaVigia</title>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="header__logo">
+            <img src="../assets/Logo.webp" alt="Logo">
+        </div><div class="header__titulo">
+            <h1>Bistro Pedra Da Vigia</h1>
+            <h3>Busca la esencia, reconecta con la sencillez del ser y del sentir.</h3>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li class="menu__option"><a href="../index.html">Home</a></li>
+                <li class="menu__option"><a href="../pages/nosotros.html">Nosotros</a></li>
+                <li class="menu__option"><a href="../pages/carta.html">Carta</a></li>
+                <li class="menu__option"><a href="../pages/reserva.html">Reserva</a></li>
+                <li class="menu__option"><a href="../pages/ubicacion.html">Ubicación</a></li>
+            </ul>
+        </nav>
+        <main class="main">
+            <div class="container">
+                <div class="main__title">
+                    <h2>Reserva</h2>
+                </div>
+                <form class="main__content main__form">
+                    <div class="main__field">
+                        <label  for="Nombre">Nombre</label>
+                        <input placeholder="Escriba aquí su nombre" type="text" id="Nombre" id="Nombre">
+                    </div>
+                    <div class="main__field">
+                        <label for="Fecha">Fecha</label>
+                        <input type="date" id="Fecha">
+                    </div>
+                    <div class="main__field">
+                        <label for="Hora">Hora</label>
+                        <input type="time" id="Hora">
+                    </div>
+                    <div class="main__field">
+                        <label for="Comensales">Comensales</label>
+                        <input min="1" type="number" value="1" id="Comensales">
+                    </div>
+                    <div class="main__field">
+                        <label for="Mesa">Mesa</label>
+                        <select id="Mesa">
+                            <option>A1</option>
+                            <option>A2</option>
+                            <option>A3</option>
+                            <option>B1</option>
+                            <option>B2</option>
+                            <option>B3</option>
+                            <option>C1</option>
+                            <option>C2</option>
+                            <option>C3</option>
+                        </select>
+                    </div>
+                    <div class="main__field">
+                        <label for="Aclaracion">Aclaración</label>
+                        <textarea placeholder="Aquí puede añadir una aclaración para el restaurante" id="Aclaracion" rows="10"></textarea>
+                    </div>
+                        <input class="main__button" type="submit">
+                </form>
+            </div>
+        </main>
+    <footer class="footer">
+        <h4 class="footer__info"> <img height="15px" src="../assets/telephone.png" alt="iconoTelefono"> +543425081931</h4><h4 class="footer__info"><img height="15px" src="../assets/instagram.png" alt="iconoInstagram"> @PedraDaVigia</h4><h4 class="footer__info"><img height="15px" src="../assets/email.png" alt="iconoEmail"> PedraDaVigia@gmail.com</h4>
+    </footer> 
+</div>
+</body>
+</html>
