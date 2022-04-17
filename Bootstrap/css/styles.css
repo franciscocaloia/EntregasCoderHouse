@@ -27,6 +27,31 @@ body {
   height: 10rem;
 }
 
+.header__titulo{
+  position: relative;
+  overflow: hidden;
+}
+@keyframes desplazamiento {
+  100%{
+    transform: translateX(calc(100vw + 10rem));
+  }
+}
+
+.header__titulo:hover> .linea{
+  animation-duration: 1.5s;
+  animation-name: desplazamiento;
+  animation-iteration-count: infinite;
+}
+
+.linea{
+  position: absolute;
+  bottom: 50%;
+  left: -10rem;
+  height: 2px;
+  width: 10rem;
+  background-image: linear-gradient(to right , lightsteelblue , #ee7498);
+  transition: all 1s;
+}
 
 .header__titulo h1 {
   font-weight: normal;
@@ -48,6 +73,7 @@ body {
     font-size: 1rem;
   }
 }
+
 
 /*------------------------------------NAV------------------------------------------*/
 .menu {
@@ -139,6 +165,10 @@ body {
   height: 20rem;
   width: 100%;
 }
+.main__video:hover{
+  transform: scale(1.2);
+  transition: all 1s;
+}
 
 .main__text{
   text-align: justify;
@@ -173,7 +203,7 @@ body {
 .container--carta{
   padding: 0.5rem;
 }
-.row{
+.tabla .row{
   margin: 0;
   border: none;
   width: 100%;
@@ -205,17 +235,11 @@ body {
 }
 
 /*------------------------------------RESERVA------------------------------------------*/
-.main__form {
+.main__form{
   justify-self: center;
-  display: grid;
-  width: 100%;
 }
-
 .main__field {
-  display: flex;
-  flex-direction: column;
   background-color: aliceblue;
-  border-radius: 0.5rem;
   margin: 0.5rem;
   padding: 1rem;
 }
@@ -224,7 +248,6 @@ body {
 select,
 textarea {
   border: rgba(64, 95, 135, 0.74) solid 2px;
-  width: 100%;
 }
 .main__field textarea {
   height: 5rem;
@@ -232,49 +255,16 @@ textarea {
 .main__button {
   border: none;
   background-color: #ee7498;
-  border-radius: 0.5rem;
   margin: 0.5rem;
   padding: 1rem;
-  justify-self:stretch;
 }
-
 .main__button:hover {
   background-color: #944d62;
   color: aliceblue;
 }
-
-.main__field label {
-  font-weight: 400;
-}
-
-
-@media (min-width: 480px) {
-  .main__field{
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .main__field input,
-  select,
-  textarea {
-    width: 70%;
-  }
-}
-@media (min-width: 700px) {
-  .main__form{
-    width: 60%;
-  }
-}
-@media (min-width: 1440px) {
-  .main__form{
-    width: 40%;
-  }
-}
-
 /*------------------------------------UBICACION------------------------------------------*/
 
 .main__map{
-  justify-self: center;
   width: 100%;
   height: 20rem;
 }
