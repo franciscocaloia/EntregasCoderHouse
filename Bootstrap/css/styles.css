@@ -11,7 +11,7 @@ body {
   display: grid;
 }
 @media (min-width: 1040px ){
-  .gird-container{
+  .grid-container{
     grid-template-columns: 15rem calc(100% - 15rem);
   }
   .footer{
@@ -129,7 +129,6 @@ body {
 
 .main__content {
   padding: 0.2rem;
-
   border-radius: 0.5rem;
   box-shadow: #373c3f 2px 2px;
   background-color: rgba(64, 95, 135, 0.74);
@@ -174,61 +173,33 @@ body {
 .container--carta{
   padding: 0.5rem;
 }
-.table {
-  
-}
-.table .row{
+.row{
   margin: 0;
   border: none;
   width: 100%;
   border-collapse: collapse;
 }
-.table .tabla__elemento{
+.tabla__elemento{
   padding: 0.5rem;
-  font-size: small;
+  font-size:smaller;
   line-height: 1rem;
   border: rgba(64, 95, 135, 1) 1px solid;
   background-color: aliceblue;
 }
-th {
-  text-transform: uppercase;
+
+.tabla__titulo{
   text-shadow: #ee7498 1px 1px;
 }
-tr th:nth-child(1) {
-  width: 20%;
-}
-tr th:nth-child(2) {
-  width: 70%;
-}
-tr th:nth-child(3) {
-  width: 10%;
-}
 
-tr td:nth-child(1) {
-  width: 20%;
-  font-weight: 500;
-}
-tr td:nth-child(2) {
-  width: 70%;
-  font-weight: 400;
-}
-tr td:nth-child(3) {
-  width: 10%;
-  font-weight: 500;
-}
-@media (min-width:400px){
-  .container--carta {
-
+@media (min-width: 700px){
+  .tabla__elemento{
+    font-size: small;
   }
 }
-
 @media (min-width: 1040px){
-  .grid-container{
-    grid-template-columns: 15rem calc(100% - 15rem);
-  }
   .tabla__elemento{
     padding: 1rem;
-    font-size: 1rem;
+    font-size:medium;
     line-height: 1.5rem;
   }
 }
