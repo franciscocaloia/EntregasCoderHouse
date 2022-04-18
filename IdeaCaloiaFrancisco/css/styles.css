@@ -145,7 +145,7 @@ body {
   display: grid;
   gap: 0.5rem;
   width: 95%;
-  padding: 1rem;
+  padding: 1rem 0.2rem;
   border-radius: 0.5rem;
   border: #373c3f 2px solid;
   box-shadow: 10px 10px 12px 4px rgba(64, 95, 135, 0.74);
@@ -173,7 +173,11 @@ body {
 .main__text{
   text-align: justify;
 }
-
+@media(min-width: 320px){
+  .container{
+    padding: 1rem;
+  }
+}
 @media (min-width: 700px){
   .main__text p{
     font-size: 1.2rem;
@@ -195,6 +199,7 @@ body {
 /*------------------------------------FOOTER------------------------------------------*/
 .footer {
   min-height: 4rem;
+  width: 100%;
   border-top: #373c3f 1px solid;
   background-color: rgba(64, 95, 135, 0.74);
 }
@@ -236,21 +241,30 @@ body {
 
 /*------------------------------------RESERVA------------------------------------------*/
 .main__form{
-  justify-self: center;
+  margin: 0 auto;
+  width: 100%;
 }
+
 .main__field {
   background-color: aliceblue;
-  margin: 0.5rem;
-  padding: 1rem;
+  align-self:stretch;
+  margin: 0.2rem;
+  padding: 0.2rem;
 }
 
 .main__field input,
 select,
 textarea {
   border: rgba(64, 95, 135, 0.74) solid 2px;
+  padding: 0;
 }
 .main__field textarea {
   height: 5rem;
+}
+
+.main__field label{
+  padding: 0;
+  font-size: smaller;
 }
 .main__button {
   border: none;
@@ -262,6 +276,23 @@ textarea {
   background-color: #944d62;
   color: aliceblue;
 }
+
+@media(min-width:320px){
+  .main__field{
+    margin: 0.5rem;
+    padding: 1rem;
+  }
+  .main__field label{
+    font-size: medium;
+  }
+}
+
+@media(min-width:1040px){
+  .main__form{
+    width: 70%;
+  }
+}
+
 /*------------------------------------UBICACION------------------------------------------*/
 
 .main__map{
