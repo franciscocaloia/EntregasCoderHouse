@@ -1,0 +1,51 @@
+.header__logo{
+    height: 10rem;
+  }
+  
+  .header__titulo{
+    position: relative;
+    overflow: hidden;
+  }
+  @keyframes desplazamiento {
+    100%{
+      transform: translateX(calc(100vw + 10rem));
+    }
+  }
+  
+  .header__titulo:hover> .linea{
+    animation-duration: 1.5s;
+    animation-name: desplazamiento;
+    animation-iteration-count: infinite;
+  }
+  
+  .linea{
+    position: absolute;
+    bottom: 50%;
+    left: -10rem;
+    height: 2px;
+    width: 10rem;
+    background-image: linear-gradient(to right , lightsteelblue , #ee7498);
+    transition: all 1s;
+  }
+  
+  .header__titulo h1 {
+    font-weight: normal;
+    color: #373c3f;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-shadow: #ee7498 1px 2px;
+  }
+  
+  
+  @media (min-width: 700px){
+    .header__logo, .header__titulo {
+    height: 10rem;
+  }
+    .header__titulo h1{
+      font-size: 3rem;
+    }
+    .header__titulo h3{
+      font-size: 1rem;
+    }
+  }
+  
