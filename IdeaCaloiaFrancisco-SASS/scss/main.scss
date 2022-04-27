@@ -1,6 +1,8 @@
+@import "variables";
+@import "mixins";
 @import "header";
-@import "main-content";
 @import "nav";
+@import "main-content";
 @import "footer";
 
 ::-webkit-scrollbar {
@@ -8,8 +10,8 @@
 }
 
 body {
-    font-family: "Open Sans", "Helvetica Neue", sans-serif;
-    background-color: lightsteelblue;
+    font-family:$main-font-family;
+    background-color: $primary-color;
 }
 
 .grid-container{
@@ -26,8 +28,19 @@ body {
     border-right: 1px solid #373c3f;
     }
 }
+
+@each $page,$title in $pages {
+    .title--#{$page}{
+        @extend .main__title;
+        &::after{
+        content: $title;
+        }
+    }
+    
+}
 /*------------------------------------CARTA------------------------------------------*/
 .container--carta{
+    @extend .container;
     padding: 0.5rem;
 }
 .tabla .row{
@@ -40,12 +53,12 @@ body {
     padding: 0.5rem;
     font-size:smaller;
     line-height: 1rem;
-    border: rgba(64, 95, 135, 1) 1px solid;
+    border: $primary-dark-color 1px solid;
     background-color: aliceblue;
 }
 
 .tabla__titulo{
-    text-shadow: #ee7498 1px 1px;
+    text-shadow: $secondary-color 1px 1px;
 }
 
 @media (min-width: 700px){
@@ -72,44 +85,41 @@ body {
     align-self:stretch;
     margin: 0.2rem;
     padding: 0.2rem;
+    input,select,textarea{
+        border: $primary-dark-color solid 2px;
+        padding: 0;
+    }
+    textarea{
+        height: 5rem;
+    }
+    label{
+        padding: 0;
+        font-size: smaller;
+    }
 }
 
-.main__field input,
-select,
-textarea {
-    border: rgba(64, 95, 135, 0.74) solid 2px;
-    padding: 0;
-}
-.main__field textarea {
-    height: 5rem;
-}
-
-.main__field label{
-    padding: 0;
-    font-size: smaller;
-}
 .main__button {
     border: none;
-    background-color: #ee7498;
+    background-color: $secondary-color;
     margin: 0.5rem;
     padding: 1rem;
-}
-.main__button:hover {
-    background-color: #944d62;
-    color: aliceblue;
+    &:hover{
+        background-color: $secondary-dark-color;
+        color: aliceblue;
+    }
 }
 
-@media(min-width:320px){
+@include mediaQuery-mobile{
     .main__field{
     margin: 0.5rem;
     padding: 1rem;
-    }
-    .main__field label{
-    font-size: medium;
+    label{
+        font-size: medium;
+        }
     }
 }
 
-@media(min-width:1040px){
+@include mediaQuery-desktop{
     .main__form{
     width: 70%;
     }
@@ -122,8 +132,9 @@ textarea {
     height: 20rem;
 }
 
-@media (min-width: 700px) {
+@include mediaQuery-tablet
+{
     .main__map{
-width: 60%;
+        width: 60%;
     }
 }

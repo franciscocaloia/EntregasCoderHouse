@@ -1,47 +1,113 @@
 .header__logo {
   height: 10rem; }
 
-.header__titulo {
-  position: relative;
-  overflow: hidden; }
-
 @keyframes desplazamiento {
   100% {
     transform: translateX(calc(100vw + 10rem)); } }
 
-.header__titulo:hover > .linea {
-  animation-duration: 1.5s;
-  animation-name: desplazamiento;
-  animation-iteration-count: infinite; }
-
-.linea {
-  position: absolute;
-  bottom: 50%;
-  left: -10rem;
-  height: 2px;
-  width: 10rem;
-  background-image: linear-gradient(to right, lightsteelblue, #ee7498);
-  transition: all 1s; }
-
-.header__titulo h1 {
-  font-weight: normal;
-  color: #373c3f;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  text-shadow: #ee7498 1px 2px; }
+.header__titulo {
+  position: relative;
+  overflow: hidden; }
+  .header__titulo:hover .linea {
+    animation-duration: 1.5s;
+    animation-name: desplazamiento;
+    animation-iteration-count: infinite; }
+  .header__titulo .linea {
+    position: absolute;
+    bottom: 50%;
+    left: -10rem;
+    height: 2px;
+    width: 10rem;
+    background-image: linear-gradient(to right, #b0c4de, #ee7498);
+    transition: all 1s; }
+  .header__titulo h1 {
+    font-weight: normal;
+    color: #373c3f;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-shadow: #ee7498 1px 2px; }
 
 @media (min-width: 700px) {
-  .header__logo, .header__titulo {
+  .header__titulo {
     height: 10rem; }
-  .header__titulo h1 {
-    font-size: 3rem; }
-  .header__titulo h3 {
-    font-size: 1rem; } }
+    .header__titulo h1 {
+      font-size: 3rem; }
+    .header__titulo h3 {
+      font-size: 1rem; } }
+
+.menu {
+  margin-top: 1rem;
+  border-bottom: #373c3f solid 1px;
+  border-top: #373c3f solid 1px; }
+  .menu ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+
+.menu__option--home a::after {
+  content: "home";
+  text-transform: capitalize; }
+
+.menu__option--nosotros a::after {
+  content: "nosotros";
+  text-transform: capitalize; }
+
+.menu__option--reserva a::after {
+  content: "reserva";
+  text-transform: capitalize; }
+
+.menu__option--carta a::after {
+  content: "carta";
+  text-transform: capitalize; }
+
+.menu__option--ubicacion a::after {
+  content: "ubicacion";
+  text-transform: capitalize; }
+
+.menu__option, .menu__option--home, .menu__option--nosotros, .menu__option--reserva, .menu__option--carta, .menu__option--ubicacion {
+  width: 100%; }
+  .menu__option a, .menu__option--home a, .menu__option--nosotros a, .menu__option--reserva a, .menu__option--carta a, .menu__option--ubicacion a {
+    display: block;
+    padding: 0.8rem;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: black;
+    text-decoration: none; }
+    .menu__option a:hover, .menu__option--home a:hover, .menu__option--nosotros a:hover, .menu__option--reserva a:hover, .menu__option--carta a:hover, .menu__option--ubicacion a:hover {
+      box-sizing: border-box;
+      text-transform: uppercase;
+      background-color: #ee7498;
+      transition: 0.5s; }
+
+@media (min-width: 700px) {
+  .menu ul {
+    flex-direction: row; }
+  .menu__option, .menu__option--home, .menu__option--nosotros, .menu__option--reserva, .menu__option--carta, .menu__option--ubicacion {
+    width: 20%; } }
+
+@media (min-width: 1040px) {
+  .menu {
+    margin-top: 0;
+    border: none;
+    border-right: 1px solid #373c3f; }
+    .menu ul {
+      flex-direction: column; }
+  .menu__option, .menu__option--home, .menu__option--nosotros, .menu__option--reserva, .menu__option--carta, .menu__option--ubicacion {
+    width: 100%; }
+    .menu__option a, .menu__option--home a, .menu__option--nosotros a, .menu__option--reserva a, .menu__option--carta a, .menu__option--ubicacion a {
+      font-weight: 700;
+      padding: 2rem;
+      font-size: 1rem; } }
 
 .main {
   min-height: calc(100vh - 30rem); }
 
-.container {
+.container, .container--carta {
   display: grid;
   gap: 0.5rem;
   width: 95%;
@@ -62,78 +128,34 @@
   margin: 0 auto;
   height: 20rem;
   width: 100%; }
+  .main__video:hover {
+    transform: scale(1.2);
+    transition: all 1s; }
 
-.main__video:hover {
-  transform: scale(1.2);
-  transition: all 1s; }
+.main__title, .title--home, .title--nosotros, .title--reserva, .title--carta, .title--ubicacion {
+  font-size: 1.5rem;
+  color: #373c3f;
+  letter-spacing: .2rem; }
 
 .main__text {
   text-align: justify; }
 
 @media (min-width: 320px) {
-  .container {
+  .container, .container--carta {
     padding: 1rem; } }
 
 @media (min-width: 700px) {
   .main__text p {
     font-size: 1.2rem;
     line-height: 1.5rem; }
-  .container {
+  .container, .container--carta {
     width: 80%; } }
 
-@media screen and (min-width: 1040px) {
+@media (min-width: 1040px) {
   .main {
     min-height: calc(100vh - 16rem); }
   .main__video {
     width: 80%; } }
-
-.menu {
-  margin-top: 1rem;
-  border-bottom: #373c3f solid 1px;
-  border-top: #373c3f solid 1px; }
-
-.menu ul {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
-  list-style: none; }
-
-.menu__option a {
-  display: block;
-  padding: 0.8rem;
-  text-align: center;
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: black;
-  text-decoration: none; }
-
-.menu__option a:hover {
-  box-sizing: border-box;
-  text-transform: uppercase;
-  background-color: #ee7498;
-  transition: 0.5s; }
-
-@media (min-width: 700px) {
-  .menu ul {
-    flex-direction: row; }
-  .menu__option {
-    width: 20%; } }
-
-@media (min-width: 1040px) {
-  .menu {
-    margin-top: 0; }
-  .menu ul {
-    flex-direction: column; }
-  .menu__option {
-    width: 100%; }
-  .menu {
-    border: none;
-    border-right: 1px solid #373c3f; }
-  .menu__option a {
-    padding: 2rem;
-    font-size: 1rem; } }
 
 .footer {
   min-height: 4rem;
@@ -146,7 +168,7 @@
 
 body {
   font-family: "Open Sans", "Helvetica Neue", sans-serif;
-  background-color: lightsteelblue; }
+  background-color: #b0c4de; }
 
 .grid-container {
   display: grid; }
@@ -158,6 +180,21 @@ body {
     grid-column: 1 / 3; }
   .header__logo {
     border-right: 1px solid #373c3f; } }
+
+.title--home::after {
+  content: "home"; }
+
+.title--nosotros::after {
+  content: "nosotros"; }
+
+.title--reserva::after {
+  content: "reserva"; }
+
+.title--carta::after {
+  content: "Carta Bistro Pedro Da Vigia"; }
+
+.title--ubicacion::after {
+  content: "ubicacion"; }
 
 /*------------------------------------CARTA------------------------------------------*/
 .container--carta {
@@ -173,7 +210,7 @@ body {
   padding: 0.5rem;
   font-size: smaller;
   line-height: 1rem;
-  border: #405f87 1px solid;
+  border: rgba(64, 95, 135, 0.74) 1px solid;
   background-color: aliceblue; }
 
 .tabla__titulo {
@@ -199,36 +236,30 @@ body {
   align-self: stretch;
   margin: 0.2rem;
   padding: 0.2rem; }
-
-.main__field input,
-select,
-textarea {
-  border: rgba(64, 95, 135, 0.74) solid 2px;
-  padding: 0; }
-
-.main__field textarea {
-  height: 5rem; }
-
-.main__field label {
-  padding: 0;
-  font-size: smaller; }
+  .main__field input, .main__field select, .main__field textarea {
+    border: rgba(64, 95, 135, 0.74) solid 2px;
+    padding: 0; }
+  .main__field textarea {
+    height: 5rem; }
+  .main__field label {
+    padding: 0;
+    font-size: smaller; }
 
 .main__button {
   border: none;
   background-color: #ee7498;
   margin: 0.5rem;
   padding: 1rem; }
-
-.main__button:hover {
-  background-color: #944d62;
-  color: aliceblue; }
+  .main__button:hover {
+    background-color: #944d62;
+    color: aliceblue; }
 
 @media (min-width: 320px) {
   .main__field {
     margin: 0.5rem;
     padding: 1rem; }
-  .main__field label {
-    font-size: medium; } }
+    .main__field label {
+      font-size: medium; } }
 
 @media (min-width: 1040px) {
   .main__form {

@@ -1,60 +1,66 @@
 .menu {
     margin-top: 1rem;
-    border-bottom: #373c3f solid 1px;
-    border-top: #373c3f solid 1px;
-  }
-  .menu ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  .menu__option a {
+    border-bottom: $dark-color solid 1px;
+    border-top: $dark-color solid 1px;
+    ul {
+        @include dflex(column,center,center);
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    } 
+}
+@each $page,$title in $pages {
+    .menu__option--#{$page}{
+        @extend .menu__option;
+        & a::after{
+            content: "#{$page}";
+            text-transform: capitalize;
+        }
+    }
+}
+.menu__option{
+    width: 100%;
+    a{
     display: block;
     padding: 0.8rem;
     text-align: center;
     font-size: 0.8rem;
-    font-weight: 700;
+    font-weight: 400;
     color: black;
     text-decoration: none;
-  }
-  
-  .menu__option a:hover{
-    box-sizing: border-box;
-    text-transform: uppercase;
-    background-color: #ee7498;
-    transition: 0.5s;
-  }
-  
-  @media (min-width: 700px){
+    &:hover{
+        box-sizing: border-box;
+        text-transform: uppercase;
+        background-color: $secondary-color;
+        transition: 0.5s;
+        }
+    }
+}
+
+@include mediaQuery-tablet{
     .menu ul {
-      flex-direction: row;
+    flex-direction: row;
     }
     .menu__option{
-      width: 20%;
+    width: 20%;
     }
-  }
-  
-  @media (min-width: 1040px){
+}
+
+@include mediaQuery-desktop{
     .menu{
-      margin-top: 0;
-    }
-    .menu ul{
-      flex-direction: column;
+    margin-top: 0;
+    border: none;
+    border-right: 1px solid $dark-color;
+    ul{
+        flex-direction: column;
+        }
     }
     .menu__option {
-      width: 100%;
+        width: 100%;
+        a{  
+            font-weight: 700;
+            padding: 2rem;
+            font-size: 1rem;
+        }
     }
-    .menu {
-      border: none;
-      border-right: 1px solid #373c3f;
-    }
-    .menu__option a {
-      padding: 2rem;
-      font-size: 1rem;
-    }
-  }
-  
-  
+}
