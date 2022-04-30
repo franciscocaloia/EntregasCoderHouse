@@ -1,0 +1,9 @@
+En todos mis archivos .html agruegue:
+	-Descripción: Utilizando la etiqueta <meta> description agregué el siguiente parrafo que describe brebemente el sitio y el contenido del mismo
+	 "Bistro Pedra Da Vigia te ofrece una experiencia unica y una calidad gastronómica sin igual. Haz tu reserva ya mismo!".
+	-KeyWords: Gracias a la etiqueta <meta> keywords agregué las siguientes palabras clave que serán de ayuda para el navegador 
+	 "HTML, CSS, SASS, BOOTSTRAP, RESPONSIVE, RESTAURANTE, BRASIL, BISTRO".
+	-Titulo: Cambié el titulo de cada pagina a una palabra que describa el contenido del sitio.
+	-Encabezado: Para mi h1 utilicé "Bistró Pedra Da Vigia", para mis h2 utilicé titulos que describan cada pagina tales como "nosotros", "carta", "reserva" y "ubicación".
+	-Navegación: Implementé el menú en todas las páginas facilitando la navegación entre todas ellas.
+	-Datos: La estructura de datos esta organizada de una manera simple y sin anidamientos de directorios profundos ni nombres inadecuados.
