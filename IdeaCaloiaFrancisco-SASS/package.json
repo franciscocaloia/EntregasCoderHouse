@@ -9,7 +9,7 @@
     "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
   "keywords": [
-    "SASS"
+    "HTML,CSS,SASS,BISTRO,RESTAURANTE,COMIDA"
   ],
   "author": "Francisco Caloia",
   "license": "ISC",
