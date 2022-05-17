@@ -12,11 +12,6 @@
     position: relative;
     overflow: hidden;
     .linea{
-            animation-duration: 1.5s;
-            animation-name: desplazamiento;
-            animation-iteration-count: infinite;
-        }
-    .linea{
         position: absolute;
         bottom: 50%;
         left: -10rem;
@@ -24,6 +19,9 @@
         width: 10rem;
         background-image: linear-gradient(to right , $primary-color , $secondary-color);
         transition: all 1s;
+        animation-duration: 5s;
+        animation-name: desplazamiento;
+        animation-iteration-count: infinite;
     }
     h1{
         font-weight: normal;

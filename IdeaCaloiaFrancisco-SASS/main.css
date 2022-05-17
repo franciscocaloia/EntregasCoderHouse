@@ -9,16 +9,17 @@
   position: relative;
   overflow: hidden; }
   .header__titulo .linea {
+    animation-duration: 1.5s;
+    animation-name: desplazamiento;
+    animation-iteration-count: infinite; }
+  .header__titulo .linea {
     position: absolute;
     bottom: 50%;
     left: -10rem;
     height: 4px;
     width: 10rem;
     background-image: linear-gradient(to right, #b0c4de, #ee7498);
-    transition: all 1s;
-    animation-duration: 5s;
-    animation-name: desplazamiento;
-    animation-iteration-count: infinite; }
+    transition: all 1s; }
   .header__titulo h1 {
     font-weight: normal;
     color: #373c3f;
