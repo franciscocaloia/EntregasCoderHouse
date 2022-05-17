@@ -8,7 +8,7 @@
 .header__titulo {
   position: relative;
   overflow: hidden; }
-  .header__titulo:hover .linea {
+  .header__titulo .linea {
     animation-duration: 1.5s;
     animation-name: desplazamiento;
     animation-iteration-count: infinite; }
@@ -16,7 +16,7 @@
     position: absolute;
     bottom: 50%;
     left: -10rem;
-    height: 2px;
+    height: 4px;
     width: 10rem;
     background-image: linear-gradient(to right, #b0c4de, #ee7498);
     transition: all 1s; }
@@ -195,6 +195,12 @@ body {
 
 .title--ubicacion::after {
   content: "ubicacion"; }
+
+/*------------------------------------NOSOTROS------------------------------------------*/
+@media (min-width: 320px) {
+  .nosotros__img {
+    max-height: 10rem;
+    max-width: 15rem; } }
 
 /*------------------------------------CARTA------------------------------------------*/
 .container--carta {

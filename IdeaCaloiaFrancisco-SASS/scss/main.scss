@@ -38,6 +38,14 @@ body {
     }
     
 }
+/*------------------------------------NOSOTROS------------------------------------------*/
+@include mediaQuery-mobile{
+    .nosotros__img{
+    max-height: 10rem;
+    max-width: 15rem;
+}
+}
+
 /*------------------------------------CARTA------------------------------------------*/
 .container--carta{
     @extend .container;
@@ -61,12 +69,13 @@ body {
     text-shadow: $secondary-color 1px 1px;
 }
 
-@media (min-width: 700px){
+@include mediaQuery-tablet{
     .tabla__elemento{
     font-size: small;
     }
 }
-@media (min-width: 1040px){
+
+@include mediaQuery-desktop{
     .tabla__elemento{
     padding: 1rem;
     font-size:medium;
