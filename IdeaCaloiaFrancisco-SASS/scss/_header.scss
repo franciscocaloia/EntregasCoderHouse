@@ -3,8 +3,35 @@
 }
 
 @keyframes desplazamiento {
+    75% {
+    transform: translateX(0px);
+    }
     100%{
     transform: translateX(calc(100vw + 10rem));
+    }
+}
+
+@keyframes appearY{
+    0%{
+        opacity: 0%;
+        transform: translateY(-10rem);
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 100%;
+    }
+}
+@keyframes appearX{
+    0%{
+        opacity: 0%;
+        transform: translateX(-30rem);
+    }
+    50%{
+        opacity: 0%;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 100%;
     }
 }
 
@@ -24,11 +51,19 @@
         animation-iteration-count: infinite;
     }
     h1{
+        animation-duration: 1s;
+        animation-name: appearY;
+        animation-iteration-count: 1;
         font-weight: normal;
         color: $dark-color;
         font-size: 1.5rem;
         text-transform: uppercase;
         text-shadow: $secondary-color 1px 2px; 
+    }
+    h3{
+        animation-duration: 1s;
+        animation-name: appearX;
+        animation-iteration-count: 1;
     }
     
 }

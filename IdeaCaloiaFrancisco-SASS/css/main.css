@@ -2,8 +2,28 @@
   height: 10rem; }
 
 @keyframes desplazamiento {
+  75% {
+    transform: translateX(0px); }
   100% {
     transform: translateX(calc(100vw + 10rem)); } }
+
+@keyframes appearY {
+  0% {
+    opacity: 0%;
+    transform: translateY(-10rem); }
+  100% {
+    transform: translateY(0);
+    opacity: 100%; } }
+
+@keyframes appearX {
+  0% {
+    opacity: 0%;
+    transform: translateX(-30rem); }
+  50% {
+    opacity: 0%; }
+  100% {
+    transform: translateX(0);
+    opacity: 100%; } }
 
 .header__titulo {
   position: relative;
@@ -20,11 +40,18 @@
     animation-name: desplazamiento;
     animation-iteration-count: infinite; }
   .header__titulo h1 {
+    animation-duration: 1s;
+    animation-name: appearY;
+    animation-iteration-count: 1;
     font-weight: normal;
     color: #373c3f;
     font-size: 1.5rem;
     text-transform: uppercase;
     text-shadow: #ee7498 1px 2px; }
+  .header__titulo h3 {
+    animation-duration: 1s;
+    animation-name: appearX;
+    animation-iteration-count: 1; }
 
 @media (min-width: 700px) {
   .header__titulo {
